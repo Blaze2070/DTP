@@ -1,0 +1,381 @@
+﻿<Window x:Class="DTP.EditInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:DTP"
+        mc:Ignorable="d"
+       Title="Редактировать происшествие" Height="620" Width="720" WindowStartupLocation="CenterScreen"
+        Background="#f6f7fb" >
+    <Window.Resources>
+        <ObjectDataProvider x:Key="WeatherList"
+                    ObjectType="{x:Type local:DTPEntities}" 
+                    MethodName="GetAllWeather" />
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#4676d7"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Width" Value="170"/>
+            <Setter Property="BorderBrush" Value="#2956a0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#5a8de2"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#3b5e9e"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key='SecondaryButtonStyle' TargetType='Button'>
+            <Setter Property='Background' Value='#ededed'/>
+            <Setter Property='Foreground' Value='#3c4256'/>
+            <Setter Property='Height' Value='38'/>
+            <Setter Property='Width' Value='100'/>
+            <Setter Property='BorderBrush' Value='#d4d9e3'/>
+            <Setter Property='BorderThickness' Value='1'/>
+            <Setter Property='Cursor' Value='Hand'/>
+            <Setter Property='Template'>
+                <Setter.Value>
+                    <ControlTemplate TargetType='{x:Type Button}'>
+                        <Border Background='{TemplateBinding Background}' 
+                                BorderBrush='{TemplateBinding BorderBrush}' 
+                                BorderThickness='{TemplateBinding BorderThickness}'
+                                CornerRadius='6'>
+                            <ContentPresenter HorizontalAlignment='Center' VerticalAlignment='Center'/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property='IsMouseOver' Value='True'>
+                                <Setter Property='Background' Value='#e0e0e0'/>
+                            </Trigger>
+                            <Trigger Property='IsPressed' Value='True'>
+                                <Setter Property='Background' Value='#c8c8c8'/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Border CornerRadius="12" Background="White" BorderBrush="#c0cad6" BorderThickness="1" Margin="8">
+            <DockPanel Margin="4,4,4,60">
+                <TabControl Margin='10,10,10,60'
+                            Background='#f0f2f5'
+                            BorderThickness='0'
+                            Padding='8'
+                            FontSize='14'
+                            FontWeight='SemiBold'>
+
+                    <TabItem Header="Общее">
+                        <StackPanel Margin="10">
+                            <WrapPanel>
+                                <StackPanel Margin="0,0,24,0">
+                                    <TextBlock Text="Дата:" Margin="0,0,0,2" />
+                                    <DatePicker SelectedDate="{Binding Accident.Date_and_Time, StringFormat=dd.MM.yyyy}" Width="200" PreviewTextInput="TextBoxCourse_PreviewTextInput" DisplayDateEnd="{x:Static sys:DateTime.Now}"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Тип происшествия:"  Margin="0,0,0,2"/>
+                                    <TextBox Text="{Binding Accident.Accident_Type}" Width="200" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+                                </StackPanel>
+                            </WrapPanel>
+                            <TextBlock Text="Место:" Margin="0,10,0,2"/>
+                            <TextBox Text="{Binding Accident.Location}" Width="420" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+                            <TextBlock Text="Описание:" Margin="0,10,0,2"/>
+                            <TextBox Text="{Binding Accident.Description}" Height="50" Width="420" TextWrapping="Wrap" AcceptsReturn="True" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+                        </StackPanel>
+                    </TabItem>
+
+                    <TabItem Header="Водитель">
+                        <StackPanel Margin="10">
+                            <DataGrid ItemsSource="{Binding FilteredDrivers}" AutoGenerateColumns="False"
+                              RowHeight="40"
+                              HeadersVisibility="Column"
+                              Margin="0,2,0,8" CanUserAddRows="False"
+                              CanUserDeleteRows="False" IsReadOnly="True"
+                              SelectionMode="{Binding SelectionMode}"
+                                SelectedItem="{Binding SelectedDriver}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Имя" Binding="{Binding First_Name}" Width="80"/>
+                                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Last_Name}" Width="100"/>
+                                    <DataGridTextColumn Header="Дата рождения" Binding="{Binding Date_of_Birth, StringFormat=dd.MM.yyyy}" Width="120" />
+                                    <DataGridTextColumn Header ="Вод.удостоверение" Binding="{Binding Drivers_License}" Width ="120" />
+                                    <DataGridTextColumn Header ="Стаж вождения" Binding="{Binding Driving_Experience}" Width ="*" />
+                                    <DataGridTemplateColumn Header="" Width ="90">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation ="Horizontal" HorizontalAlignment ="Center">
+                                                    <Button Content ="🗑"
+                  Width ="30" Height ="30"
+                  Click ="DeleteDriverButton_Click"
+                  />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <WrapPanel>
+                                <StackPanel Margin="0,0,16,0">
+                                    <TextBlock Text="Фамилия:" Margin="0,0,0,2" />
+                                    <TextBox Width="150" x:Name="Dlastname" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Имя:" Margin="0,0,0,2"/>
+                                    <TextBox Width="150" x:Name="Dfirstname"  PreviewTextInput="TextBoxEditName_PreviewTextInput" />
+                                </StackPanel>
+                            </WrapPanel>
+                            <WrapPanel Margin="0,10,0,0">
+                                <StackPanel Margin="0,0,16,0">
+                                    <TextBlock Text="Дата рождения:" Margin="0,0,0,2"/>
+                                    <DatePicker Width="150" x:Name="Dbirth" PreviewTextInput="TextBoxCourse_PreviewTextInput" DisplayDateEnd="{x:Static sys:DateTime.Now}" SelectedDateChanged="Dbirth_SelectedDateChanged"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Стаж вождения (лет):" Margin="0,0,0,2"/>
+                                    <TextBox Width="65" x:Name="Dexp" PreviewTextInput="Dexp_PreviewTextInput" LostFocus="Dexp_LostFocus"/>
+                                </StackPanel>
+                            </WrapPanel>
+                            <TextBlock Text="Водительское удостоверение:" Margin="0,10,0,2"/>
+                            <TextBox  Width="200" x:Name="Dlicense"  HorizontalAlignment="Left"/>
+                        </StackPanel>
+                    </TabItem>
+
+                    <TabItem Header="Пассажир">
+                        <StackPanel Margin="10">
+                            <DataGrid ItemsSource="{Binding FilteredPassengers}" AutoGenerateColumns="False"
+                  RowHeight="40"
+                  HeadersVisibility="Column"
+                  Margin="0,2,0,8" CanUserAddRows="False"
+                  CanUserDeleteRows="False" IsReadOnly="True"
+                  SelectionMode="{Binding SelectionMode}"
+                    SelectedItem="{Binding SelectedPassenger}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Имя" Binding="{Binding First_Name}" Width="80" />
+                                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Last_Name}" Width="120"/>
+                                    <DataGridTextColumn Header="Дата рождения" Binding="{Binding Date_of_Birth, StringFormat=dd.MM.yyyy}" Width="150"/>
+                                    <DataGridTextColumn Header="Травмы" Binding="{Binding Injury_Status}" Width="*"/>
+                                    <DataGridTemplateColumn Header="" Width ="90">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation ="Horizontal" HorizontalAlignment ="Center">
+                                                    <Button Content ="🗑"
+                                                     Width ="30" Height ="30"
+                                                     Click ="DeletePassengerButton_Click"
+                                                     />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <WrapPanel>
+                                <StackPanel Margin="0,0,16,0">
+                                    <TextBlock Text="Фамилия:" Margin="0,0,0,2"/>
+                                    <TextBox Name="Plastname" Width="140" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+                                </StackPanel>
+                                <StackPanel Margin="0,0,16,0">
+                                    <TextBlock Text="Имя:" Margin="0,0,0,2"/>
+                                    <TextBox Name="Pfirstname" Width="140" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Травмы:" Margin="0,0,0,2"/>
+                                    <TextBox Name="Pinjury" Width="140" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+                                </StackPanel>
+                            </WrapPanel>
+                            <TextBlock Text="Дата рождения:" Margin="0,10,0,2"/>
+                            <DatePicker Name="Pbirth" Width="140" HorizontalAlignment="Left"  PreviewTextInput="TextBoxCourse_PreviewTextInput" DisplayDateEnd="{x:Static sys:DateTime.Now}"/>
+                        </StackPanel>
+                    </TabItem>
+
+                    <TabItem Header="Полицейский">
+                        <StackPanel Margin="10">
+                            <DataGrid ItemsSource="{Binding FilteredPolice}" AutoGenerateColumns="False"
+                  RowHeight="40"
+                  HeadersVisibility="Column"
+                  Margin="0,2,0,8" CanUserAddRows="False"
+                  CanUserDeleteRows="False" IsReadOnly="True"
+                  SelectionMode="{Binding SelectionMode}"
+                   SelectedItem="{Binding SelectedPolice}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Имя" Binding="{Binding First_Name}" Width="80"/>
+                                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Last_Name}" Width="120"/>
+                                    <DataGridTextColumn Header="Звание" Binding="{Binding Rank}" Width="*"/>
+                                    <DataGridTextColumn Header="Номер жетона" Binding="{Binding Badge_Number}" Width="*" />
+                                    <DataGridTemplateColumn Header="" Width ="90">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation ="Horizontal" HorizontalAlignment ="Center">
+                                                    <Button Content ="🗑"
+                                                        Width ="30" Height ="30"
+                                                        Click ="DeletePoliceButton_Click"
+                                                        />  
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <WrapPanel>
+                                <StackPanel Margin="0,0,16,0">
+                                    <TextBlock Text="Фамилия:" Margin="0,0,0,2"/>
+                                    <TextBox Name="PoliceLastName" Width="140" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Имя:" Margin="0,0,0,2"/>
+                                    <TextBox Name="PoliceFirstName" Width="140" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+                                </StackPanel>
+                            </WrapPanel>
+                            <TextBlock Text="Звание:" Margin="0,10,0,2"/>
+                            <TextBox Name="PoliceRank" Width="200" HorizontalAlignment="Left" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+                            <TextBlock Text="Номер жетона:" Margin="0,10,0,2"/>
+                            <TextBox Name="PoliceBadgeNumber" Width="120" HorizontalAlignment="Left" PreviewTextInput="TextBoxCourse_PreviewTextInput"/>
+                        </StackPanel>
+                    </TabItem>
+
+                    <TabItem Header="Транспорт">
+                        <StackPanel Margin="10">
+                            <DataGrid ItemsSource="{Binding FilteredVehicle}" AutoGenerateColumns="False"
+  RowHeight="40"
+  HeadersVisibility="Column"
+  Margin="0,2,0,8" CanUserAddRows="False"
+  CanUserDeleteRows="False" IsReadOnly="True"
+  SelectionMode="{Binding SelectionMode}"
+  SelectedItem="{Binding SelectedVehicle}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Госномер" Binding="{Binding License_Plate_Number}" Width="*"/>
+                                    <DataGridTextColumn Header="Марка" Binding="{Binding Make}" Width="*"/>
+                                    <DataGridTextColumn Header="Модель" Binding="{Binding Model}" Width="*"/>
+                                    <DataGridTextColumn Header="Год выпуска" Binding="{Binding Year_of_Manufacture}" Width="*"/>
+                                    <DataGridTemplateColumn Header="" Width ="90">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation ="Horizontal" HorizontalAlignment ="Center">
+                                                    <Button Content ="🗑"
+                  Width ="30" Height ="30"
+                  Click ="DeleteVehicleButton_Click"
+                  />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <WrapPanel Margin="0,10,0,0">
+                                <StackPanel Margin="0,0,16,0">
+                                    <TextBlock Text="Госномер:" Margin="0,0,0,2"/>
+                                    <TextBox Name="VehicleLicensePlateNumber" Width="140"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Марка:" Margin="0,0,0,2"/>
+                                    <TextBox Name="VehicleMake" Width="140" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+                                </StackPanel>
+                            </WrapPanel>
+
+                            <WrapPanel Margin="0,10,0,0">
+                                <StackPanel Margin="0,0,16,0">
+                                    <TextBlock Text="Модель:" Margin="0,0,0,2"/>
+                                    <TextBox Name="VehicleModel" Width="140"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Год выпуска:" Margin="0,0,0,2"/>
+                                    <TextBox Name="VehicleYearOfManufacture" Width="75"  LostFocus="VehicleYearOfManufacture_LostFocus"/>
+                                </StackPanel>
+                            </WrapPanel>
+                        </StackPanel>
+                    </TabItem>
+
+                    <TabItem Header="Погодные условия">
+                        <StackPanel Margin="10">
+                            <ComboBox x:Name="WeatherComboBox" ItemsSource="{Binding Source={StaticResource WeatherList}}" Margin="0,0,0,10" Height="30">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" >
+                                            <TextBlock Text="{Binding Weather_Condition_ID}" Margin="0,0,10,0"/>
+                                            <TextBlock Text="{Binding Temperature}" Margin="0,0,10,0"/>
+                                            <TextBlock Text="{Binding Precipitation}" Margin="0,0,10,0"/>
+                                            <TextBlock Text="{Binding Light_Conditions}" Margin="0,0,10,0"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+
+                            <Button Content="Добавить новые погодные условия" Click="AddWeather_Click" />
+                        </StackPanel>
+                    </TabItem>
+                    
+                    <TabItem Header="Материальный ущерб">
+                        <StackPanel Margin="10">
+                            <DataGrid ItemsSource="{Binding FilteredDamage}" AutoGenerateColumns="False"
+                              RowHeight="40"
+                              HeadersVisibility="Column"
+                              Margin="0,2,0,8" CanUserAddRows="False"
+                              CanUserDeleteRows="False" IsReadOnly="True"
+                              SelectionMode="{Binding SelectionMode}"
+                                SelectedItem="{Binding SelectedDamage}">   
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Оценочная стоимость (руб)" Binding="{Binding Estimated_Cost}" Width="200"/>
+                                    <DataGridTextColumn Header ="Описание" Binding="{Binding Damage_Description}" Width ="*"/>
+                                    <DataGridTemplateColumn Header="" Width ="90">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation ="Horizontal" HorizontalAlignment ="Center">
+                                                    <Button Content ="🗑"
+                  Width ="30" Height ="30"
+                  Click ="DeleteDamageButton_Click"
+                  />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <TextBlock Text="Описание:"/>
+                            <TextBox Name="DamageDescription" Height="50" Width="400" AcceptsReturn="True" TextWrapping="Wrap" HorizontalAlignment="Left" PreviewTextInput="TextBoxEditName_PreviewTextInput"/>
+
+                            <TextBlock Text="Оценочная стоимость (руб):" Margin="0,10,0,2"/>
+                            <TextBox Name="EstimatedCost" Width="140" HorizontalAlignment="Left" PreviewTextInput="TextBoxCourse_PreviewTextInput"/>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+            </DockPanel>
+        </Border>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Margin="0,0,22,16">
+            <Button Content="Сохранить изменения"
+                    Click="ButtonEdit_Click"
+                    Background="#4676d7"
+                    Foreground="White"
+                    Width="170" Height="38"
+                    FontWeight="Bold"
+                    Margin="0,0,10,0"
+                    BorderBrush="#2956a0"
+                    BorderThickness="1"
+                    />
+            <Button Content="Закрыть"
+                    Click="ButtonEditBack_Click"
+                    Background="#ededed"
+                    Foreground="#3c4256"
+                    Width="100" Height="38"
+                    BorderBrush="#d4d9e3"
+                    BorderThickness="1"
+                    />
+        </StackPanel>
+    </Grid>
+</Window>

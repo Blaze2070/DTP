@@ -1,0 +1,133 @@
+﻿<Window x:Class="DTP.AddInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:DTP"
+        mc:Ignorable="d"
+        Title="Новое происшествие" Height="643" Width="700"
+        Background="#FAFAFA"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="WeatherList"
+                        ObjectType="{x:Type local:DTPEntities}" 
+                        MethodName="GetAllWeather" />
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0,4,0,16"/>
+            <Setter Property="Padding" Value="12 6"/>
+            <Setter Property="BorderBrush" Value="#BDBDBD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#CCE2E2E2" BlurRadius="3" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="BorderBrush" Value="#1976D2"/>
+                    <Setter Property="BorderThickness" Value="2"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#1976D2"/>
+            <Setter Property="Foreground" Value="#FFF"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10,4"/>
+            <Setter Property="Margin" Value="0,4,0,16"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#AAB9F6" BlurRadius="6" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1565C0"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#0D47A1"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,0,0,16"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10,2"/>
+            <Setter Property="BorderBrush" Value="#BDBDBD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#CCE2E2E2" BlurRadius="3" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+
+                    <Setter Property="BorderBrush" Value="#1976D2"/>
+                    <Setter Property="BorderThickness" Value="2"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="Margin" Value="0,0,0,16"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="0,2,0,2"/>
+            <Setter Property="BorderBrush" Value="#BDBDBD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="#263238"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,0,0,2"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Border Background="#FFF"  
+            Padding="22"
+            Margin="20">
+            <StackPanel x:Name="Items">
+                <TextBlock Text="Дата и время:"/>
+                <DatePicker x:Name="Date" SelectedDate="{Binding Date_and_Time, UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="TextBoxCourse_PreviewTextInput" DisplayDateEnd="{x:Static sys:DateTime.Now}"/>
+                <TextBlock Text="Тип происшествия:"/>
+                <TextBox Text="{Binding Accident_Type, UpdateSourceTrigger=PropertyChanged}"  PreviewTextInput="TextBoxName_PreviewTextInput" />
+                <TextBlock Text="Место:"/>
+                <TextBox Text="{Binding Location, UpdateSourceTrigger=PropertyChanged}"  PreviewTextInput="TextBoxName_PreviewTextInput" />
+                <TextBlock Text="Описание:"/>
+                <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" Height="60" AcceptsReturn="True"  PreviewTextInput="TextBoxName_PreviewTextInput" />
+                <TextBlock Text="Погодные условия:"/>
+                <ComboBox x:Name="WeatherComboBox" ItemsSource="{Binding Source={StaticResource WeatherList}}" Height="32">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Weather_Condition_ID}" Margin="0,0,10,0"/>
+                                <TextBlock Text="{Binding Temperature}" Margin="0,0,10,0"/>
+                                <TextBlock Text="{Binding Precipitation}" Margin="0,0,10,0"/>
+                                <TextBlock Text="{Binding Light_Conditions}" Margin="0,0,10,0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Button Content="Добавить новые погодные условия" Click="AddWeather_Click"
+                        Background="#e3f2fd" Foreground="#1976D2" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,16,0,0">
+                    <Button Content="Сохранить" Click="ButtonSave_Click" Width="140" Height="44" Margin="0,0,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6e5f8e3de0514ee7ad81e41fca37fa81" Name="Diagram1" ZoomLevel="75">
+        <EntityTypeShape EntityType="DTPModel.Accident" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DTPModel.Driver" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DTPModel.Material_Damage" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DTPModel.Passenger" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DTPModel.Police_Officer" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DTPModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DTPModel.Vehicle" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DTPModel.Weather_Conditions" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="DTPModel.FK__Accident__id_wea__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="DTPModel.FK__Material___id_Ac__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="DTPModel.Accident_Driver" ManuallyRouted="false" />
+        <AssociationConnector Association="DTPModel.Accident_Passenger" ManuallyRouted="false" />
+        <AssociationConnector Association="DTPModel.Accident_Police_Officer" ManuallyRouted="false" />
+        <AssociationConnector Association="DTPModel.Accident_Vehicle" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

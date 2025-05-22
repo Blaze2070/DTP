@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище DTPModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accident">
+    <Key>
+      <PropertyRef Name="Accident_id" />
+    </Key>
+    <Property Name="Accident_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date_and_Time" Type="datetime" Nullable="false" />
+    <Property Name="Location" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Accident_Type" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Description" Type="text" Nullable="false" />
+    <Property Name="id_weather_conditions" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Accident_Driver">
+    <Key>
+      <PropertyRef Name="Accident_id" />
+      <PropertyRef Name="Driver_id" />
+    </Key>
+    <Property Name="Accident_id" Type="int" Nullable="false" />
+    <Property Name="Driver_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Accident_Passenger">
+    <Key>
+      <PropertyRef Name="Accident_id" />
+      <PropertyRef Name="Passenger_id" />
+    </Key>
+    <Property Name="Accident_id" Type="int" Nullable="false" />
+    <Property Name="Passenger_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Accident_Police_Officer">
+    <Key>
+      <PropertyRef Name="Accident_id" />
+      <PropertyRef Name="Police_Officer_id" />
+    </Key>
+    <Property Name="Accident_id" Type="int" Nullable="false" />
+    <Property Name="Police_Officer_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Accident_Vehicle">
+    <Key>
+      <PropertyRef Name="Accident_id" />
+      <PropertyRef Name="Vehicle_id" />
+    </Key>
+    <Property Name="Accident_id" Type="int" Nullable="false" />
+    <Property Name="Vehicle_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="Driver_ID" />
+    </Key>
+    <Property Name="Driver_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Date_of_Birth" Type="datetime" Nullable="false" />
+    <Property Name="Drivers_License" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Driving_Experience" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Material_Damage">
+    <Key>
+      <PropertyRef Name="Damage_ID" />
+    </Key>
+    <Property Name="Damage_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Damage_Description" Type="text" Nullable="false" />
+    <Property Name="Estimated_Cost" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="id_Accident" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Passenger">
+    <Key>
+      <PropertyRef Name="Passenger_ID" />
+    </Key>
+    <Property Name="Passenger_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Date_of_Birth" Type="datetime" Nullable="false" />
+    <Property Name="Injury_Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Police_Officer">
+    <Key>
+      <PropertyRef Name="Officer_ID" />
+    </Key>
+    <Property Name="Officer_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Rank" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Badge_Number" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="Vehicle_ID" />
+    </Key>
+    <Property Name="Vehicle_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="License_Plate_Number" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Make" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Model" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Year_of_Manufacture" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Weather_Conditions">
+    <Key>
+      <PropertyRef Name="Weather_Condition_ID" />
+    </Key>
+    <Property Name="Weather_Condition_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Temperature" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Precipitation" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Light_Conditions" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Accident___Accid__4CA06362">
+    <End Role="Accident" Type="Self.Accident" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Accident_Driver" Type="Self.Accident_Driver" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accident">
+        <PropertyRef Name="Accident_id" />
+      </Principal>
+      <Dependent Role="Accident_Driver">
+        <PropertyRef Name="Accident_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accident___Accid__5070F446">
+    <End Role="Accident" Type="Self.Accident" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Accident_Passenger" Type="Self.Accident_Passenger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accident">
+        <PropertyRef Name="Accident_id" />
+      </Principal>
+      <Dependent Role="Accident_Passenger">
+        <PropertyRef Name="Accident_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accident___Accid__5441852A">
+    <End Role="Accident" Type="Self.Accident" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Accident_Vehicle" Type="Self.Accident_Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accident">
+        <PropertyRef Name="Accident_id" />
+      </Principal>
+      <Dependent Role="Accident_Vehicle">
+        <PropertyRef Name="Accident_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accident___Accid__5812160E">
+    <End Role="Accident" Type="Self.Accident" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Accident_Police_Officer" Type="Self.Accident_Police_Officer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accident">
+        <PropertyRef Name="Accident_id" />
+      </Principal>
+      <Dependent Role="Accident_Police_Officer">
+        <PropertyRef Name="Accident_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accident___Drive__4D94879B">
+    <End Role="Driver" Type="Self.Driver" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Accident_Driver" Type="Self.Accident_Driver" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="Driver_ID" />
+      </Principal>
+      <Dependent Role="Accident_Driver">
+        <PropertyRef Name="Driver_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accident___Passe__5165187F">
+    <End Role="Passenger" Type="Self.Passenger" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Accident_Passenger" Type="Self.Accident_Passenger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Passenger">
+        <PropertyRef Name="Passenger_ID" />
+      </Principal>
+      <Dependent Role="Accident_Passenger">
+        <PropertyRef Name="Passenger_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accident___Polic__59063A47">
+    <End Role="Police_Officer" Type="Self.Police_Officer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Accident_Police_Officer" Type="Self.Accident_Police_Officer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Police_Officer">
+        <PropertyRef Name="Officer_ID" />
+      </Principal>
+      <Dependent Role="Accident_Police_Officer">
+        <PropertyRef Name="Police_Officer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accident___Vehic__5535A963">
+    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Accident_Vehicle" Type="Self.Accident_Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="Vehicle_ID" />
+      </Principal>
+      <Dependent Role="Accident_Vehicle">
+        <PropertyRef Name="Vehicle_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accident__id_wea__398D8EEE">
+    <End Role="Weather_Conditions" Type="Self.Weather_Conditions" Multiplicity="1" />
+    <End Role="Accident" Type="Self.Accident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Weather_Conditions">
+        <PropertyRef Name="Weather_Condition_ID" />
+      </Principal>
+      <Dependent Role="Accident">
+        <PropertyRef Name="id_weather_conditions" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Material___id_Ac__46E78A0C">
+    <End Role="Accident" Type="Self.Accident" Multiplicity="1" />
+    <End Role="Material_Damage" Type="Self.Material_Damage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accident">
+        <PropertyRef Name="Accident_id" />
+      </Principal>
+      <Dependent Role="Material_Damage">
+        <PropertyRef Name="id_Accident" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище DTPModelContainer">
+    <EntitySet Name="Accident" EntityType="Self.Accident" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Accident_Driver" EntityType="Self.Accident_Driver" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Accident_Passenger" EntityType="Self.Accident_Passenger" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Accident_Police_Officer" EntityType="Self.Accident_Police_Officer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Accident_Vehicle" EntityType="Self.Accident_Vehicle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Driver" EntityType="Self.Driver" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Material_Damage" EntityType="Self.Material_Damage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Passenger" EntityType="Self.Passenger" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Police_Officer" EntityType="Self.Police_Officer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vehicle" EntityType="Self.Vehicle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Weather_Conditions" EntityType="Self.Weather_Conditions" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Accident___Accid__4CA06362" Association="Self.FK__Accident___Accid__4CA06362">
+      <End Role="Accident" EntitySet="Accident" />
+      <End Role="Accident_Driver" EntitySet="Accident_Driver" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accident___Accid__5070F446" Association="Self.FK__Accident___Accid__5070F446">
+      <End Role="Accident" EntitySet="Accident" />
+      <End Role="Accident_Passenger" EntitySet="Accident_Passenger" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accident___Accid__5441852A" Association="Self.FK__Accident___Accid__5441852A">
+      <End Role="Accident" EntitySet="Accident" />
+      <End Role="Accident_Vehicle" EntitySet="Accident_Vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accident___Accid__5812160E" Association="Self.FK__Accident___Accid__5812160E">
+      <End Role="Accident" EntitySet="Accident" />
+      <End Role="Accident_Police_Officer" EntitySet="Accident_Police_Officer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accident___Drive__4D94879B" Association="Self.FK__Accident___Drive__4D94879B">
+      <End Role="Driver" EntitySet="Driver" />
+      <End Role="Accident_Driver" EntitySet="Accident_Driver" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accident___Passe__5165187F" Association="Self.FK__Accident___Passe__5165187F">
+      <End Role="Passenger" EntitySet="Passenger" />
+      <End Role="Accident_Passenger" EntitySet="Accident_Passenger" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accident___Polic__59063A47" Association="Self.FK__Accident___Polic__59063A47">
+      <End Role="Police_Officer" EntitySet="Police_Officer" />
+      <End Role="Accident_Police_Officer" EntitySet="Accident_Police_Officer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accident___Vehic__5535A963" Association="Self.FK__Accident___Vehic__5535A963">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="Accident_Vehicle" EntitySet="Accident_Vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accident__id_wea__398D8EEE" Association="Self.FK__Accident__id_wea__398D8EEE">
+      <End Role="Weather_Conditions" EntitySet="Weather_Conditions" />
+      <End Role="Accident" EntitySet="Accident" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Material___id_Ac__46E78A0C" Association="Self.FK__Material___id_Ac__46E78A0C">
+      <End Role="Accident" EntitySet="Accident" />
+      <End Role="Material_Damage" EntitySet="Material_Damage" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

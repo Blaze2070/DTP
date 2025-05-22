@@ -1,0 +1,79 @@
+﻿<Window x:Class="DTP.AddWeatherWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DTP"
+        mc:Ignorable="d"
+        Title="Добавление погоды"
+        Height="511"
+        Width="741"
+        Background="#F1F5FB"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border Background="White"
+                CornerRadius="18"
+                Padding="40"
+                Margin="10"
+                SnapsToDevicePixels="True">
+            <Border.Effect>
+                <DropShadowEffect Color="#44000000" BlurRadius="24" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Добавить параметры погоды"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           Foreground="#223B63"
+                           Margin="0,0,0,26"
+                           HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Температура:"
+                           Margin="0,0,0,4"
+                           FontSize="15"
+                           Foreground="#324764"/>
+                <TextBox x:Name="tbTemperature"
+                         Height="38"
+                         Margin="0,0,0,14"
+                         Padding="10"
+                         Background="#F3F8FF"
+                         BorderThickness="0"
+                         FontSize="15"  PreviewTextInput="TextBoxCourse_PreviewTextInput"/>
+
+                <TextBlock Text="Осадки:"
+                           Margin="0,0,0,4"
+                           FontSize="15"
+                           Foreground="#324764"/>
+                <TextBox x:Name="tbPrecipitation"
+                         Height="38"
+                         Margin="0,0,0,14"
+                         Padding="10"
+                         Background="#F3F8FF"
+                         BorderThickness="0"
+                         FontSize="15" PreviewTextInput="TextBoxName_PreviewTextInput"/>
+
+                <TextBlock Text="Освещённость:"
+                           Margin="0,0,0,4"
+                           FontSize="15"
+                           Foreground="#324764"/>
+                <TextBox x:Name="tbLight"
+                         Height="38"
+                         Margin="0,0,0,28"
+                         Padding="10"
+                         Background="#F3F8FF"
+                         BorderThickness="0"
+                         FontSize="15" PreviewTextInput="TextBoxName_PreviewTextInput"/>
+
+                <Button Content="Сохранить"
+                        Height="42"
+                        Background="#468FF3"
+                        Foreground="White"
+                        FontWeight="SemiBold"
+                        FontSize="15"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Click="SaveClick"
+                        Margin="0,10,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

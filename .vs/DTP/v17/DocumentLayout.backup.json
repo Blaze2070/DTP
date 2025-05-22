@@ -1,0 +1,337 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\editinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\editinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|c:\\users\\\u0431\u0443\u043B\u0430\u0442\\desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0437\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\dtp\\dtp\\editinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\editinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\passenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\passenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\police_officer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\police_officer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\addinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\addinfo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\dtp.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\dtp.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\addinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\addinfo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\weather_conditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\weather_conditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\addweatherwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\addweatherwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\accident.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\accident.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\addweatherwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\addweatherwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\dtp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\dtp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\dtp\\dtp.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{D10DCCE8-98FB-4C54-A5E9-88FADB5849DC}|DTP\\DTP.csproj|solutionrelative:dtp\\dtp.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditInfo.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\EditInfo.xaml.cs",
+              "RelativeDocumentMoniker": "DTP\\EditInfo.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\EditInfo.xaml.cs*",
+              "RelativeToolTip": "DTP\\EditInfo.xaml.cs*",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAgwLYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T16:52:16.172Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EditInfo.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\EditInfo.xaml",
+              "RelativeDocumentMoniker": "DTP\\EditInfo.xaml",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\EditInfo.xaml",
+              "RelativeToolTip": "DTP\\EditInfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-06T16:43:41.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Passenger.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Passenger.cs",
+              "RelativeDocumentMoniker": "DTP\\Passenger.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Passenger.cs",
+              "RelativeToolTip": "DTP\\Passenger.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T10:03:10.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Police_Officer.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Police_Officer.cs",
+              "RelativeDocumentMoniker": "DTP\\Police_Officer.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Police_Officer.cs",
+              "RelativeToolTip": "DTP\\Police_Officer.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T23:36:10.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Driver.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Driver.cs",
+              "RelativeDocumentMoniker": "DTP\\Driver.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Driver.cs",
+              "RelativeToolTip": "DTP\\Driver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T16:31:39.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\App.xaml",
+              "RelativeDocumentMoniker": "DTP\\App.xaml",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\App.xaml",
+              "RelativeToolTip": "DTP\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-09T21:33:08.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Vehicle.cs",
+              "RelativeDocumentMoniker": "DTP\\Vehicle.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Vehicle.cs",
+              "RelativeToolTip": "DTP\\Vehicle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T14:45:08.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\App.config",
+              "RelativeDocumentMoniker": "DTP\\App.config",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\App.config",
+              "RelativeToolTip": "DTP\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-06T20:13:34.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Weather_Conditions.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Weather_Conditions.cs",
+              "RelativeDocumentMoniker": "DTP\\Weather_Conditions.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Weather_Conditions.cs",
+              "RelativeToolTip": "DTP\\Weather_Conditions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T19:37:37.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AddWeatherWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\AddWeatherWindow.xaml.cs",
+              "RelativeDocumentMoniker": "DTP\\AddWeatherWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\AddWeatherWindow.xaml.cs",
+              "RelativeToolTip": "DTP\\AddWeatherWindow.xaml.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwDAAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T19:14:31.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Accident.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Accident.cs",
+              "RelativeDocumentMoniker": "DTP\\Accident.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\Accident.cs",
+              "RelativeToolTip": "DTP\\Accident.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T19:06:06.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AddWeatherWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\AddWeatherWindow.xaml",
+              "RelativeDocumentMoniker": "DTP\\AddWeatherWindow.xaml",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\AddWeatherWindow.xaml",
+              "RelativeToolTip": "DTP\\AddWeatherWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-06T19:14:12.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddInfo.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\AddInfo.xaml",
+              "RelativeDocumentMoniker": "DTP\\AddInfo.xaml",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\AddInfo.xaml",
+              "RelativeToolTip": "DTP\\AddInfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-06T16:43:17.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddInfo.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\AddInfo.xaml.cs",
+              "RelativeDocumentMoniker": "DTP\\AddInfo.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\AddInfo.xaml.cs",
+              "RelativeToolTip": "DTP\\AddInfo.xaml.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAwwGYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T16:49:15.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DTP.Context.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\DTP.Context.cs",
+              "RelativeDocumentMoniker": "DTP\\DTP.Context.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\DTP.Context.cs",
+              "RelativeToolTip": "DTP\\DTP.Context.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAuwEIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T16:40:25.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DTP.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\DTP.cs",
+              "RelativeDocumentMoniker": "DTP\\DTP.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\DTP.cs",
+              "RelativeToolTip": "DTP\\DTP.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T07:37:38.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DTP.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\DTP.edmx",
+              "RelativeDocumentMoniker": "DTP\\DTP.edmx",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\DTP.edmx [Diagram1]",
+              "RelativeToolTip": "DTP\\DTP.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-04-30T07:30:00.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "DTP\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\MainWindow.xaml",
+              "RelativeToolTip": "DTP\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-30T07:21:15.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "DTP\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0411\u0443\u043B\u0430\u0442\\Desktop\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\\u0417\u0430\u0449\u0438\u0442\u0430 \u0431\u0434\\DTP\\DTP\\MainWindow.xaml.cs",
+              "RelativeToolTip": "DTP\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T07:21:13.99Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

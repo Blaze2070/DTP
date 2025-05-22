@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DTPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Accident">
+    <Key>
+      <PropertyRef Name="Accident_id" />
+    </Key>
+    <Property Name="Accident_id" Type="Int32" Nullable="false" />
+    <Property Name="Date_and_Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Accident_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_weather_conditions" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Weather_Conditions" Relationship="Self.FK__Accident__id_wea__398D8EEE" FromRole="Accident" ToRole="Weather_Conditions" />
+    <NavigationProperty Name="Material_Damage" Relationship="Self.FK__Material___id_Ac__46E78A0C" FromRole="Accident" ToRole="Material_Damage" />
+    <NavigationProperty Name="Driver" Relationship="Self.Accident_Driver" FromRole="Accident" ToRole="Driver" />
+    <NavigationProperty Name="Passenger" Relationship="Self.Accident_Passenger" FromRole="Accident" ToRole="Passenger" />
+    <NavigationProperty Name="Police_Officer" Relationship="Self.Accident_Police_Officer" FromRole="Accident" ToRole="Police_Officer" />
+    <NavigationProperty Name="Vehicle" Relationship="Self.Accident_Vehicle" FromRole="Accident" ToRole="Vehicle" />
+  </EntityType>
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="Driver_ID" />
+    </Key>
+    <Property Name="Driver_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Date_of_Birth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Drivers_License" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Driving_Experience" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Accident" Relationship="Self.Accident_Driver" FromRole="Driver" ToRole="Accident" />
+  </EntityType>
+  <EntityType Name="Material_Damage">
+    <Key>
+      <PropertyRef Name="Damage_ID" />
+    </Key>
+    <Property Name="Damage_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Damage_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estimated_Cost" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="id_Accident" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Accident" Relationship="Self.FK__Material___id_Ac__46E78A0C" FromRole="Material_Damage" ToRole="Accident" />
+  </EntityType>
+  <EntityType Name="Passenger">
+    <Key>
+      <PropertyRef Name="Passenger_ID" />
+    </Key>
+    <Property Name="Passenger_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Date_of_Birth" Type="DateTime" Precision="3" Nullable="false" />
+    <Property Name="Injury_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Accident" Relationship="Self.Accident_Passenger" FromRole="Passenger" ToRole="Accident" />
+  </EntityType>
+  <EntityType Name="Police_Officer">
+    <Key>
+      <PropertyRef Name="Officer_ID" />
+    </Key>
+    <Property Name="Officer_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Rank" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Badge_Number" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Accident" Relationship="Self.Accident_Police_Officer" FromRole="Police_Officer" ToRole="Accident" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="Vehicle_ID" />
+    </Key>
+    <Property Name="Vehicle_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="License_Plate_Number" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Make" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Year_of_Manufacture" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Accident" Relationship="Self.Accident_Vehicle" FromRole="Vehicle" ToRole="Accident" />
+  </EntityType>
+  <EntityType Name="Weather_Conditions">
+    <Key>
+      <PropertyRef Name="Weather_Condition_ID" />
+    </Key>
+    <Property Name="Weather_Condition_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Temperature" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Precipitation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Light_Conditions" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Accident" Relationship="Self.FK__Accident__id_wea__398D8EEE" FromRole="Weather_Conditions" ToRole="Accident" />
+  </EntityType>
+  <Association Name="FK__Accident__id_wea__398D8EEE">
+    <End Role="Weather_Conditions" Type="Self.Weather_Conditions" Multiplicity="1" />
+    <End Role="Accident" Type="Self.Accident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Weather_Conditions">
+        <PropertyRef Name="Weather_Condition_ID" />
+      </Principal>
+      <Dependent Role="Accident">
+        <PropertyRef Name="id_weather_conditions" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Material___id_Ac__46E78A0C">
+    <End Role="Accident" Type="Self.Accident" Multiplicity="1" />
+    <End Role="Material_Damage" Type="Self.Material_Damage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accident">
+        <PropertyRef Name="Accident_id" />
+      </Principal>
+      <Dependent Role="Material_Damage">
+        <PropertyRef Name="id_Accident" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Accident_Driver">
+    <End Role="Accident" Type="Self.Accident" Multiplicity="*" />
+    <End Role="Driver" Type="Self.Driver" Multiplicity="*" />
+  </Association>
+  <Association Name="Accident_Passenger">
+    <End Role="Accident" Type="Self.Accident" Multiplicity="*" />
+    <End Role="Passenger" Type="Self.Passenger" Multiplicity="*" />
+  </Association>
+  <Association Name="Accident_Police_Officer">
+    <End Role="Accident" Type="Self.Accident" Multiplicity="*" />
+    <End Role="Police_Officer" Type="Self.Police_Officer" Multiplicity="*" />
+  </Association>
+  <Association Name="Accident_Vehicle">
+    <End Role="Accident" Type="Self.Accident" Multiplicity="*" />
+    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="DTPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accident" EntityType="Self.Accident" />
+    <EntitySet Name="Driver" EntityType="Self.Driver" />
+    <EntitySet Name="Material_Damage" EntityType="Self.Material_Damage" />
+    <EntitySet Name="Passenger" EntityType="Self.Passenger" />
+    <EntitySet Name="Police_Officer" EntityType="Self.Police_Officer" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Vehicle" EntityType="Self.Vehicle" />
+    <EntitySet Name="Weather_Conditions" EntityType="Self.Weather_Conditions" />
+    <AssociationSet Name="FK__Accident__id_wea__398D8EEE" Association="Self.FK__Accident__id_wea__398D8EEE">
+      <End Role="Weather_Conditions" EntitySet="Weather_Conditions" />
+      <End Role="Accident" EntitySet="Accident" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Material___id_Ac__46E78A0C" Association="Self.FK__Material___id_Ac__46E78A0C">
+      <End Role="Accident" EntitySet="Accident" />
+      <End Role="Material_Damage" EntitySet="Material_Damage" />
+    </AssociationSet>
+    <AssociationSet Name="Accident_Driver" Association="Self.Accident_Driver">
+      <End Role="Accident" EntitySet="Accident" />
+      <End Role="Driver" EntitySet="Driver" />
+    </AssociationSet>
+    <AssociationSet Name="Accident_Passenger" Association="Self.Accident_Passenger">
+      <End Role="Accident" EntitySet="Accident" />
+      <End Role="Passenger" EntitySet="Passenger" />
+    </AssociationSet>
+    <AssociationSet Name="Accident_Police_Officer" Association="Self.Accident_Police_Officer">
+      <End Role="Accident" EntitySet="Accident" />
+      <End Role="Police_Officer" EntitySet="Police_Officer" />
+    </AssociationSet>
+    <AssociationSet Name="Accident_Vehicle" Association="Self.Accident_Vehicle">
+      <End Role="Accident" EntitySet="Accident" />
+      <End Role="Vehicle" EntitySet="Vehicle" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
